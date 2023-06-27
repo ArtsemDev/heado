@@ -1,0 +1,37 @@
+<div class="header_section">
+   <div class="container">
+      <nav class="navbar navbar-dark bg-dark">
+         <a class="logo" href="{{ url_for('main_index') }}"><img src="{{ url_for('static', path='/main/images/logo.png') }}" alt=""></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('main_index') }}">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('main_index') }}#about">About</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('main_index') }}#services">Services</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('main_index') }}#blog">Blog</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('main_index') }}#projects">Projects</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('main_contact') }}">Contact Us</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+   </div>
+   <!--banner section start -->
+   {% if is_banner %}
+    {% include '/main/components/sections/banner.html' %}
+   {% endif %}
+   <!--banner section end -->
+</div>

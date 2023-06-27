@@ -1,0 +1,51 @@
+{% extends '/main/base.html' %}
+
+{% block title %}
+CONTACT | DUCK BOTS
+{% endblock %}
+
+{% block content %}
+
+   <!--header section start -->
+   {% include '/main/components/header.html' %}
+      <div class="contact_section layout_padding">
+         <div class="container">
+            <h1 class="touch_title">Contact Us</h1>
+            <div class="contact_section_2">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="email_text">
+                        <form id="contact-form">
+                           <div class="form-group">
+                              <label for="name">Name</label>
+                              <input type="text" class="name-bt" placeholder="Name" id="name" maxlength="64">
+                           </div>
+                           <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email" class="email-bt" placeholder="Email" id="email" maxlength="128">
+                           </div>
+                           <div class="form-group">
+                              <label for="message">Message</label>
+                              <textarea class="message-bt" placeholder="Message" rows="5" id="message"></textarea>
+                           </div>
+                           <div class="alert-success"></div>
+                           <div class="alert-danger"></div>
+                           <div class="send_btn">
+                              <a href="#" id="contact">SEND</a>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   <!--footer section start -->
+   {% include '/main/components/footer.html' %}
+   <!--client section end -->
+
+   <!--copyright section start -->
+   {% include '/main/components/sections/copyright.html' %}
+   <!--copyright section end -->
+
+{% endblock %}

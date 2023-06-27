@@ -1,0 +1,43 @@
+{% extends '/main/base.html' %}
+
+{% block title %}
+HEADO
+{% endblock %}
+
+{% block content %}
+
+   <!--header section start -->
+   {% with %}
+   {% set is_banner=True %}
+      {% include '/main/components/header.html' %}
+   {% endwith %}
+   <!--header section end -->
+
+   <!--about section start -->
+   {% include '/main/components/sections/about.html' %}
+   <!--about section end -->
+
+   <!--services section start -->
+   {% include '/main/components/sections/service.html' %}
+   <!--services section end -->
+
+   <!--blog section start -->
+   {% include '/main/components/sections/blog.html' %}
+   <!--blog section end -->
+
+   <!--newsletter section start -->
+   <!--newsletter section end -->
+
+   <!--client section start -->
+   {% include '/main/components/sections/client.html' %}
+   <!--client section end -->
+
+   <!--footer section start -->
+   {% include '/main/components/footer.html' %}
+   <!--client section end -->
+
+   <!--copyright section start -->
+   {% include '/main/components/sections/copyright.html' %}
+   <!--copyright section end -->
+
+{% endblock %}

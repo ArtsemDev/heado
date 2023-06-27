@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+
+  web:
+    build: .
+    command: uvicorn app:app --reload --host 0.0.0.0 --port 8000
+    volumes:
+      - .:/heado
+    ports:
+      - "80:8000"
+    environment:
+      - DATABASE_URL=postgresql://heado:heado@db:5432/heado
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15.3-alpine3.18
+    environment:
+      - POSTGRES_USER=heado
+      - POSTGRES_PASSWORD=heado
+      - POSTGRES_DB=heado

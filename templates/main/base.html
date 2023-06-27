@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>{% block title %}{% endblock %}</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/main/css/bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/main/css/style.css') }}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{ url_for('static', path='/main/css/responsive.css') }}">
+      <!-- favicon -->
+      <link rel="icon" href="{{ url_for('static', path='/main/images/favicon.png') }}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', path='/main/css/jquery.mCustomScrollbar.min.css') }}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link rel="stylesheet" href="{{ url_for('static', path='/main/css/owl.carousel.min.css') }}">
+   </head>
+   <body>
+   {% block content %}{% endblock %}
+      <script src="{{ url_for('static', path='/main/js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', path='/main/js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static', path='/main/js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', path='/main/js/jquery-3.0.0.min.js') }}"></script>
+      <script src="{{ url_for('static', path='/main/js/plugin.js') }}"></script>
+      <script src="{{ url_for('static', path='/main/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ url_for('static', path='/main/js/custom.js') }}"></script>
+      <script src="{{ url_for('static', path='/main/js/contact.js') }}"></script>
+   </body>
+</html>
